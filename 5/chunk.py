@@ -14,3 +14,6 @@ class Chunk:
 
     def get_text(self):
         return ''.join([morph.surface for morph in self.morphs if morph.pos != '記号'])
+
+    def contains(self, pos):
+        return any((morph.pos == pos for morph in self.morphs))
