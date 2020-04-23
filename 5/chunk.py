@@ -15,5 +15,14 @@ class Chunk:
     def get_text(self):
         return ''.join([morph.surface for morph in self.morphs if morph.pos != '記号'])
 
+    def get_predicate(self):
+        for morph in self.morphs:
+            if morph.pos == '動詞':
+                return morph.base
+        return ''
+
+    def get_particles(self):
+        return [morph.base for morph in self.morphs if morph.pos == '助詞']
+
     def contains(self, pos):
         return any((morph.pos == pos for morph in self.morphs))
