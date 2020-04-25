@@ -15,6 +15,9 @@ class Chunk:
     def get_text(self):
         return ''.join([morph.surface for morph in self.morphs if morph.pos != '記号'])
 
+    def get_text_sub(self, str):
+        return ''.join([str if morph.pos == '名詞' else morph.surface for morph in self.morphs if morph.pos != '記号'])
+
     def get_predicate(self):
         for morph in self.morphs:
             if morph.pos == '動詞':
