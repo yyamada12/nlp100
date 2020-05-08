@@ -1,0 +1,10 @@
+GoogleNews-vectors-negative300.bin
+test.txt
+test_X.npy
+test_y.npy
+train.txt
+train_X.npy
+train_y.npy
+valid.txt
+valid_X.npy
+valid_y.npy
