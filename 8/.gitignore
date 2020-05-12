@@ -8,3 +8,4 @@ train_y.npy
 valid.txt
 valid_X.npy
 valid_y.npy
+*checkpoint*
